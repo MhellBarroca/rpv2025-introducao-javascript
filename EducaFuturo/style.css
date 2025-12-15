@@ -1,0 +1,234 @@
+/* RESET / CONFIGURAÇÕES */
+* {
+    margin: 0;
+    /* Remove margens padrões dos navegadores */
+    padding: 0;
+    /* Remove espaçamentos padrões */
+    box-sizing: border-box;
+    /* Permite controlar tamanhos corretamente */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Faz a rolagem suave ao clicar no menu, ou seja, quando você está numa pagina e quer outra ele faz  a rolagem, 
+    diferente se não tivesse, pois picaria.*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* Fonte simples e legível */
+}
+
+
+
+/*HEADER */
+
+/* - Use display: flex no header para separar
+     a Logo (esquerda) e o Menu (direita).
+   - DICA: Use justify-content: space-between. 
+*/
+
+header {
+    position: fixed;
+    /* Header fica fixo no topo durante a rolagem */
+    top: 0;
+    /* Grudado no topo */
+    width: 100%;
+    /* Largura total */
+    height: 80px;
+    /* Altura fixa do header */
+    background: #111;
+    /* Cor sólida de fundo */
+    color: #fff;
+    /* Cor do texto */
+    z-index: 1000;
+    /* Garantir que fique acima das seções */
+
+    display: flex;
+    /* Deixa logo e menu lado a lado */
+    justify-content: space-between;
+    /* Logo à esquerda e menu à direita */
+    align-items: center;
+    /* Centraliza verticalmente */
+
+    padding: 0 30px;
+    /* Espaçamento interno */
+}
+
+
+
+
+/*LOGO */
+
+.logo {
+    font-size: 28px;
+    /* Tamanho da fonte da logo */
+    font-weight: bold;
+    /* Deixa mais forte */
+}
+
+
+
+/*MENU (NAV)*/
+
+nav ul {
+    list-style: none;
+    /* Remove bolinhas da lista */
+    display: flex;
+    /* Coloca os itens lado a lado */
+    gap: 30px;
+    /* Espaçamento entre os itens */
+}
+
+nav a {
+    color: #fff;
+    /* Cor branca */
+    text-decoration: none;
+    /* Remove sublinhado */
+    font-size: 18px;
+    /* Tamanho do texto */
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #f1c40f;
+    /* Muda para amarelo ao passar o mouse */
+}
+
+
+
+/*SEÇÃO HOME */
+
+/* HOME é a capa inicial */
+
+#home {
+    height: 100vh;
+    /* Ocupa toda a tela */
+    background: #1abc9c;
+    /* Fundo em tom verde/azul */
+
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    flex-direction: column;
+    /* Título, texto e botão ficam em coluna */
+
+    padding-top: 80px;
+    /* Corrige o espaço do header fixo */
+}
+
+#home h1 {
+    font-size: 48px;
+    color: #fff;
+}
+
+#home p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #e0e0e0;
+}
+
+#home button {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    background: #fff;
+    color: #111;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+
+/*SEÇÃO CURSOS (GRID)*/
+
+#cursos {
+    height: 100vh;
+    /* Altura mínima */
+    background: #3498db;
+    padding: 100px 40px;
+    /* 100px para compensar o header */
+}
+
+#cursos h2 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* Container dos cards */
+.cursos-container {
+    display: grid;
+    /* GRID */
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 colunas iguais */
+    gap: 20px;
+    /* Espaço entre cards */
+}
+
+/* Estilo dos cards */
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+
+/*SEÇÃO SOBRE (ABSOLUTE) */
+
+#sobre {
+    height: 100vh;
+    background: #9b59b6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 80px;
+}
+
+/* Card principal */
+.card-sobre {
+    background: #fff;
+    padding: 40px;
+    width: 450px;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+/* Selo posicionado no canto superior direito */
+.selo {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+
+    background: #e74c3c;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 6px;
+}
+
+/*SEÇÃO CONTATO */
+
+#contato {
+    height: 100vh;
+    background: #e67e22;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 80px;
+}
+
+#contato h2 {
+    color: #fff;
+    font-size: 36px;
+}
